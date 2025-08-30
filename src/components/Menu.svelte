@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { page } from '$app/stores'; // Import SvelteKit's page store for active link highlighting
 
     // Define your menu items
@@ -9,32 +10,33 @@
         { name: 'Contact', path: '/about/contact' }, // Example of a nested page
     ];
 </script>
+<div class="flex md:flex-row flex-col items-center">
+    <img class="logo" src="{base}/logo.jpeg" alt="Fourwebminds Technology" />
+    <nav class="main-nav flex-1">
+        <ul class="nav-list">
+            {#each menuItems as item}
+                <li class="nav-item">
+                    <a
+                        href={item.path}
+                        class="nav-link"
+                        class:active={$page.url.pathname === item.path}
+                        aria-current={$page.url.pathname === item.path ? 'page' : undefined}
+                    >
+                        {item.name}
+                    </a>
+                </li>
+            {/each}
+        </ul>
+    </nav>
+</div>
 
-<nav class="main-nav">
-    <ul class="nav-list">
-        {#each menuItems as item}
-            <li class="nav-item">
-                <a
-                    href={item.path}
-                    class="nav-link"
-                    class:active={$page.url.pathname === item.path}
-                    aria-current={$page.url.pathname === item.path ? 'page' : undefined}
-                >
-                    {item.name}
-                </a>
-            </li>
-        {/each}
-    </ul>
-</nav>
 
 <style>
-    .main-nav {
-        background-color: #2c3e50; /* Dark blue-grey */
-        padding: 1rem 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    .logo {
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
-
     .nav-list {
         list-style: none;
         margin: 0;
@@ -49,7 +51,6 @@
     }
 
     .nav-link {
-        color: #ecf0f1; /* Light grey */
         text-decoration: none;
         font-size: 1.1em;
         padding: 8px 15px;
@@ -70,7 +71,7 @@
         font-weight: bold;
         box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
     }
-
+    
     /* Responsive adjustments for smaller screens */
     @media (max-width: 600px) {
         .nav-list {
