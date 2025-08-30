@@ -4,27 +4,22 @@
 
     // Define your menu items
     const menuItems = [
-        { name: 'Home', path: '/' },
-        { name: 'About', path: '/about' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Contact', path: '/about/contact' }, // Example of a nested page
+        { name: 'Portfolio', path: '#Porfolio' },
+        { name: 'Contact', path: 'https://docs.google.com/forms/d/1C5oHMI02X88A4kdsGdYrgqqPJR5BfWaciMJEVA6wpcw/viewform?edit_requested=true' }, // Example of a nested page
     ];
 </script>
-<div class="flex md:flex-row flex-col items-center">
-    <img class="logo" src="{base}/logo.jpeg" alt="Fourwebminds Technology" />
+<div class="flex md:flex-row flex-col items-center ">
+    <a href="/"><img class="logo" src="{base}/logo.jpeg" alt="Fourwebminds Technology" /></a>
     <nav class="main-nav flex-1">
         <ul class="nav-list">
             {#each menuItems as item}
-                <li class="nav-item">
-                    <a
-                        href={item.path}
-                        class="nav-link"
-                        class:active={$page.url.pathname === item.path}
-                        aria-current={$page.url.pathname === item.path ? 'page' : undefined}
-                    >
-                        {item.name}
-                    </a>
-                </li>
+                <a href={item.path}
+                class="text-slate-600 hover:bg-[#00385e] hover:text-sky-700 hover:text-white px-3 py-2 rounded-md font-medium transition-colors"
+                target={item.path.startsWith('http') ? '_blank' : ''}
+                rel={item.path.startsWith('http') ? 'noopener noreferrer' : ''}
+                >
+                {item.name}
+                </a>
             {/each}
         </ul>
     </nav>
