@@ -33,6 +33,6 @@
         <p class="text-xl">{subtitle}</p>
         <h1 class="text-5xl my-2">{title}</h1>
         <h2 class="text-2xl my-3">{description}</h2>
-        <button class="cta-button bg-blue-600 py-2 px-4 rounded-md mt-5"><a href="https://docs.google.com/forms/d/1C5oHMI02X88A4kdsGdYrgqqPJR5BfWaciMJEVA6wpcw/preview" target="_blank">About Us</a></button>
+        <button class="cta-button py-2 px-4 rounded-md mt-5 bg-[#1665d0] hover:bg-[#00385e]"><a href="https://docs.google.com/forms/d/1C5oHMI02X88A4kdsGdYrgqqPJR5BfWaciMJEVA6wpcw/preview" target="_blank">Contact Us</a></button>
     </div>
 </section>

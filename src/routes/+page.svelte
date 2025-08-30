@@ -4,11 +4,16 @@
     import Header from "../components/Hero.svelte";
     import Hero from "../components/Hero.svelte";
 	import Menu from "../components/Menu.svelte";
+    import Portfolio from "../components/Portfolio.svelte";
+    import Footer from "../components/Footer.svelte";
 
 </script>
 
 <style>
     /* Styling for this component */
+    html {
+        scroll-behavior: smooth;
+    }
     h1 {
         color: #ff3e00; /* Svelte's signature orange */
         font-family: Arial, sans-serif;
@@ -20,8 +25,8 @@
         font-size: 1.2em;
     }
 </style>
-<div class="header">
-    <div class="container mx-auto px-4">
+<div class="header w-[70%] mx-auto">
+    <div class="container mx-auto">
         <Menu />
     </div>
 
@@ -30,6 +35,12 @@
     <div class="hero-section">
         <Hero />
     </div>
+    <div id="Porfolio" class="portfolio-section">
+        <Portfolio />
+    </div>
 
+</div>
+<div class="footer">
+   <Footer />
 </div>
 
