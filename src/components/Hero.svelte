@@ -1,22 +1,38 @@
 <script>
-    // You could also fetch features from an API or prop
-    const features = [
-        { icon: '✨', title: 'Intuitive Design', description: 'Easy to use interfaces.' },
-        { icon: '⚡', title: 'Blazing Fast', description: 'Powered by SvelteKit.' },
-        { icon: '🤝', title: 'Collaborative', description: 'Work together seamlessly.' },
-        { icon: '🔒', title: 'Secure', description: 'Your data is safe with us.' },
-    ];
+    // You can define props if you want to make this section reusable with different content
+    export let title = 'Seamless WordPress Solutions.';
+    export let subtitle = ' Get a beautiful, functional website without the technical hassle.';
+    export let description = 'Beyond Just Building: Web Solutions That Endure. Get a stunning website with reliable, continuous support for peace of mind and lasting growth.';
+    export let ctaText = 'Get Started Now';
 </script>
-
-<section class="features-section">
-    <h2>Our Key Features</h2>
-    <div class="features-grid">
-        {#each features as feature}
-            <div class="feature-item">
-                <span class="icon">{feature.icon}</span>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-            </div>
-        {/each}
+<style>
+    .white {
+        color: #fff;
+    }
+    .hero-section {
+        background-image: url('/hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .hero-section:before {
+        background: rgb(0 0 0 / 72%);
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .hero-content {
+        position: relative;
+    }
+</style>
+<section class="hero-section flex items-center justify-center text-3xl font-semibold h-screen">
+    <div class="hero-content white container w-[70%] mx-auto">
+        <p class="text-xl">{subtitle}</p>
+        <h1 class="text-5xl my-2">{title}</h1>
+        <h2 class="text-2xl my-3">{description}</h2>
+        <button class="cta-button bg-blue-600 py-2 px-4 rounded-md mt-5"><a href="https://docs.google.com/forms/d/1C5oHMI02X88A4kdsGdYrgqqPJR5BfWaciMJEVA6wpcw/preview" target="_blank">About Us</a></button>
     </div>
 </section>
