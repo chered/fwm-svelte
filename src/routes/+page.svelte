@@ -7,6 +7,8 @@
     import Portfolio from "../components/Portfolio.svelte";
     import Footer from "../components/Footer.svelte";
 
+
+
 </script>
 
 <style>
@@ -25,6 +27,7 @@
         font-size: 1.2em;
     }
 </style>
+
 <div class="header w-[70%] mx-auto">
     <div class="container mx-auto">
         <Menu />
