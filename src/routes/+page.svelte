@@ -5,7 +5,10 @@
     import Hero from "../components/Hero.svelte";
 	import Menu from "../components/Menu.svelte";
     import Portfolio from "../components/Portfolio.svelte";
+    import Testimonial from "../components/Testimonial.svelte";
     import Footer from "../components/Footer.svelte";
+
+
 
 </script>
 
@@ -25,6 +28,7 @@
         font-size: 1.2em;
     }
 </style>
+
 <div class="header w-[70%] mx-auto">
     <div class="container mx-auto">
         <Menu />
@@ -37,6 +41,9 @@
     </div>
     <div id="Porfolio" class="portfolio-section">
         <Portfolio />
+    </div>
+    <div id="Porfolio" class="portfolio-section">
+        <Testimonial />
     </div>
 
 </div>
