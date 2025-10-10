@@ -5,6 +5,7 @@
     import Hero from "../components/Hero.svelte";
 	import Menu from "../components/Menu.svelte";
     import Portfolio from "../components/Portfolio.svelte";
+    import Testimonial from "../components/Testimonial.svelte";
     import Footer from "../components/Footer.svelte";
 
 
@@ -40,6 +41,9 @@
     </div>
     <div id="Porfolio" class="portfolio-section">
         <Portfolio />
+    </div>
+    <div id="Porfolio" class="portfolio-section">
+        <Testimonial />
     </div>
 
 </div>
